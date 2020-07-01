@@ -1,18 +1,21 @@
 <%- include('partials/header') %>
 <section id='imgux1' style="margin-bottom: 0; padding-bottom: 3px;">   
     <div class='container'>
-        <div class="imguploader" id='imgup1'>
+        <div class="imguploader" id='imgup1' style="position: relative; max-width: 100%; min-width: 100%;">
             <img src="#" alt="" id='igt1' style='display: none;' class='imguploader_igt'>
             <span id='text1'>
                 Drop Your Image Here...
             </span>
+            <div id= 'bfload' style='height: 0;width: 0;display: none; position: absolute;top: 0;left: 0; background: rgba(122, 178, 234, 0.89);'>
+                <h1>Loading</h1>
+            </div>
         </div>
     </div>
 </section>
 <div class="container" style="font-size: 2em;font-family: Solway;">
     <div class="row-lg-0" style="justify-content: center; text-align: center;">
         <div class="col-lg-9" id= 'label1' style="margin: auto;">
-            Hello
+            Labels
         </div>
     </div>
 </div>

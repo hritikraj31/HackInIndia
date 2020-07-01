@@ -29,6 +29,10 @@ function loadImage(ev) {
 	f1.append('imgupld', file);
 	document.getElementById('igt1').src = URL.createObjectURL(file);
 	document.getElementById('igt1').style.display = 'block';
+	bfup = document.getElementById('bfload');
+	bfup.style.display = 'block';
+	bfup.style.height = '100%';
+	bfup.style.width = '100%';
 	fetch('/uploadimage', {
 		method: 'POST',
 		credentials: 'same-origin',
@@ -37,7 +41,8 @@ function loadImage(ev) {
 		.then((res) => res.json())
 		.then((data) => {
 			console.log(data);
-			document.getElementById('label1').innerText = data;
+			bfup.style.display = 'none';
+			// document.getElementById('label1').innerText = data;
 		})
 		.catch((err) => {
 			console.log(err);

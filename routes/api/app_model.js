@@ -24,17 +24,18 @@ router.post('/uploadimage', middleware.isLoggedIn, (req, res) => {
 		if (err) {
 			console.log(err);
 		} else {
-			(async () => {
-				try {
-					const args = [];
-					args.push(req.file.path);
-					console.log(JSON.stringify(args));
-					const output = await run(args);
-					res.json({ msg: output[0] + '' });
-				} catch (e) {
-					console.log(e.stack);
-				}
-			})();
+			res.json({ msg: 'success' });
+			// (async () => {
+			// 	try {
+			// 		const args = [];
+			// 		args.push(req.file.path);
+			// 		console.log(JSON.stringify(args));
+			// 		const output = await run(args);
+			// 		res.json({ msg: output[0] + '' });
+			// 	} catch (e) {
+			// 		console.log(e.stack);
+			// 	}
+			// })();
 		}
 	});
 });

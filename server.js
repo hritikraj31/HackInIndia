@@ -8,12 +8,12 @@ const express = require('express'),
 	LocalStrategy = require('passport-local'),
 	indexRoute = require('./routes/api/index'),
 	app_model = require('./routes/api/app_model'),
-	flash = require('flash'),
+	flash = require('connect-flash'),
 	app = express();
 
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
-
+app.use(flash());
 app.use(
 	require('express-session')({
 		secret: secretKey,

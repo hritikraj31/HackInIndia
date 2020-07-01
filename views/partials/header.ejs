@@ -91,7 +91,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Medilab</a></h1>
+      <h1 class="logo mr-auto"><a href="/">Medilab</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -113,14 +113,25 @@
 
     </div>
   </header><!-- End Header -->
+  <div class ='container' id='aggx1' style="font-family: Acme; position: absolute; top: 10px; left: 15%; z-index: 10000;">
+    <script>
+      setTimeout( ()=>{
+        if(document.getElementById('aggx1')){
+        document.getElementById('aggx1').style.display='none';
+        document.getElementById('aggx1').style.height='0';
+        document.getElementById('aggx1').style.width='0';
+      }},3000);
+    </script>
     <% if(error && error.length>0){ %>
-        <div class= "alert alert-danger">
-            <%= error %>
-        </div>
-    <% } %>
-    <% if(success && success.length>0){ %>
-            <div class= "alert alert-success">
-                <%= success %>
-            </div>
-    <% } %>
+      <div class= "alert alert-danger">
+          <%= error %>
+      </div>
+  <% } %>
+  <% if(success && success.length>0){ %>
+          <div class= "alert alert-success">
+              <%= success %>
+          </div>
+  <% } %>
+  </div>
+    
     

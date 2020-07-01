@@ -4,10 +4,10 @@ middlewareObj.isLoggedIn = function (req, res, next) {
 		return next();
 	}
 	if (req.isAuthenticated()) {
-		req.flash(
-			'success',
-			'Successfully logged in. Nice to meet you ' + req.user.username
-		);
+		// req.flash(
+		// 	'success',
+		// 	'Successfully logged in. Nice to meet you ' + req.user.username
+		// );
 		return next();
 	}
 	req.flash('error', 'You need to be logged in to do that.');
