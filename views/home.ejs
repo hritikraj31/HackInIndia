@@ -1,0 +1,259 @@
+<%- include('partials/header') %>
+
+ <!-- ======= Hero Section ======= -->
+ <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <h1>Welcome to Medilab</h1>
+      <h2>An AI solution to diagnosis of Tuberculosis</h2>
+      <!--<a href="#about" class="btn-get-started scrollto">Get Started</a>-->
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-10 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Why Choose Medilab?</h3>
+              <p>
+                The solution we have provided may play an effective role in the early
+                diagnosis of TB disease that might be applied as a supportive tool. Modern
+                computer technologies should be trained in diagnostics for rapid disease
+                management. It should be noted that the only step needed in using our
+                approach in the real world is a medium to send requests to the server. Thus
+                once this step is done, there'll be little to no help needed in maintaining the
+                model.                
+              </p>
+              <div class="text-center">
+                <a href="#about" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+         <!--<div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Corporis voluptates sit</h4>
+                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Ullamco laboris ladore pan</h4>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Labore consequatur</h4>
+                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                  </div>
+                </div>
+              </div>
+            </div> End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch">
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>An AI solution to diagnosis of Tuberculosis</h3>
+            <p>Tuberculosis (TB), an infectious
+              disease usually caused by Mycobacterium tuberculosis
+              (MTB) bacteria, that affect many people in developing
+              countries. According to WHO, 1.7 billion people (about 23%) of the world
+              population are estimated to have latent TB infection, indicating a risk of
+              developing active TB during their lifetime.
+              </p>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">Our Idea</a></h4>
+              <p class="description">Our idea aims at helping people detect
+                the onset early along with providing help to deal with it. We provide a deep
+                learning-based approach that can be used by people mainly in rural areas as
+                there are many cases where access to the X-Ray machine is possible (through
+                low-cost projects and donations), but often the radiological expertise is
+                missing for accurately asserting the images. 
+                </p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">Manually Time Consuming</a></h4>
+              <p class="description">In more developed countries, X-ray radiography is often used for screening new arrivals and 
+                determining eligibility for a work permit. The task of manually examining images is time-consuming 
+                and an algorithm could increase efficiency, improve performance, and ultimately reduce the cost of this screening.</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-atom"></i></div>
+              <h4 class="title"><a href="">Our Objective</a></h4>
+              <p class="description">A well-trained model can perform like an expert practitioner, and our objective 
+                will be to reduce the trade-off between speed and accuracy.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+
+
+        <!-- ======= Contact Section ======= -->
+    <section id="login" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Login Signup</h2>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mt-1" style= "justify-content: center;">
+
+          
+
+          <div class="col-lg-8 mt-2 mt-lg-0">
+              <div class="row">
+                <button class="col-sm" style="border-right: 2px #055194 solid;" onclick='hideform("f1","f2")'>Login</button>
+                <button class="col-sm" onclick='hideform("f2","f1")'>Register</button>
+              </div>
+            <form action="/login" method="POST"  id= 'f1'>
+              <div class="container" > 
+                <label><b>Username</b></label> 
+                <input type="text" placeholder="Enter Username" name="username" id= "username" required> 
+      
+                <label><b>Password</b></label> 
+                <input type="password" placeholder="Enter Password" name="password" id= "password" required> 
+                <div class="container">
+                    <button type="submit">Login</button> 
+                </div>
+              </div> 
+
+            </form>
+            <form action="/register" method="POST"  id= 'f2' style="display:none;height: 0; width:0;">
+                <div class="container" > 
+                  <label><b>Username</b></label> 
+                  <input type="text" placeholder="Enter Username" name="username" required> 
+        
+                  <label><b>Password</b></label> 
+                  <input type="password" placeholder="Enter Password" name="password" required> 
+                  <div class="container">
+                      <button type="submit">Sign Up</button> 
+                  </div>
+                </div> 
+  
+              </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#faq-list-1">
+                What are the scopes of improvment?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-parent=".faq-list">
+                <p>
+                  Currently, our aim is to make accurate predictions on X-Ray scans but if we get access to more data
+                   then our model can be improved quite easily and will also be able to segment the affected part of the
+                    lungs scan. This proposed idea will provide a huge help to practitioners, where their task would be
+                   analyzing the segmented scans giving instructions to other helping doctors. Getting access to more amount
+                    of data will lead to further improvement in the performance of our model.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-2" class="collapsed">
+                How will the machine learning algorithm work? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-parent=".faq-list">
+                <p>
+                  This encoder-decoder model will extract features by downsampling the X-Ray image in the encoder block,
+                   while the decoder will use those features to generate a prediction for presence of MTB bacteria.
+                    Connecting links will be present between the encoder-decoder block to prevent the loss of information 
+                    and complex features can be learned.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-3" class="collapsed">
+                What tech stacks have been used for web development? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-parent=".faq-list">
+                <p>
+                  To deploy the ML model for production, there will be a web application. The frontend of the web application 
+                  will be written in HTML, CSS, and javascript using bootstrap and jquery that would include two pages. 
+                  The first page will be a landing page where users can sign in or register. The second page will have an 
+                  uploader which will take X-Ray scans as input from the user. This input will be fed into the trained model
+                   which will be running on a virtual machine running on cloud.
+                  The backend of the software will be implemented using node js and express.
+                  The templates will be rendered using Ejs. Python scripts will be run by using the child-process spawn method.
+                    The authentication would be done with passport js and user information would be added to MongoDB. 
+                  The output will be provided after passing through the trained machine learning model.
+
+                </p>
+              </div>
+            </li>
+<!-- 
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-parent=".faq-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                </p>
+              </div>
+            </li> -->
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+<script>
+    function hideform(f1,f2){
+        const fa1= document.getElementById(f1);
+        const fa2= document.getElementById(f2);
+        fa1.style.display = "block";
+        fa2.style.display = "none";
+        fa1.style.height = "100%";
+        fa1.style.width = "100%";
+        fa2.style.height = "0";
+        fa2.style.height = "0";
+    }
+</script>
+<%- include('partials/footer') %>

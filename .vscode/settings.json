@@ -1,0 +1,5 @@
+{
+	"editor.formatOnSave": true,
+	"prettier.trailingComma": "none",
+	"liveServer.settings.port": 3000
+}

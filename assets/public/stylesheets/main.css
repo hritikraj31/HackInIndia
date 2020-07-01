@@ -1,0 +1,29 @@
+.imguploader {
+	height: 440px;
+	width: 98%;
+	background: rgb(240, 255, 254);
+	margin: 10px auto;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 3em;
+	font-family: 'Solway';
+	border: 5px dashed;
+}
+.imguploader_igt {
+	height: 100%;
+	margin: auto;
+}
+.uploading:after {
+	content: '';
+}
+
+@media screen and (max-width: 755px) {
+	.imguploader {
+		font-size: 2em;
+	}
+}
+@media screen and (min-width: 992px) {
+	#imgux1 {
+		margin: 100px 100px;
+	}
+}

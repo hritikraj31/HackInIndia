@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hritik Raj, Chetan , Prakrit">
+    <meta name="description" content="This is project which uses machine learning to check TB from X RAY image.">
+    <meta name="keywords" content="Machine Learning, TB Detection, Web Development">
+    <title>CyberLabs</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+        <!-- <link href="https://fonts.googleapis.com/css?family=Viaoda+Libre&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet"> -->
+        <link rel="stylesheet" href="/public/stylesheets/main.css">
+    <!-- </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed" style = "z-index: 10;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">CyberLabs</a>
+                <button type="button" data-target="#nav1" data-toggle="collapse" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                </div>
+                <div class="collapse navbar-collapse" id="nav1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <% if(!currentUser){%>
+                            <li><a href="/login"><i class="fa fa-sign-in" style="margin-right: 10px;"></i>Login</a></li>
+                            <li><a href="/register"><i class="fa fa-user-plus" style="margin-right: 10px;"></i>Sign Up</a></li>
+                         <% } else { %>
+                            <li><a href="#"><i class="fa fa-user" style="margin-right: 10px;"></i><%= currentUser.username %></a></li>
+                            <li><a href="/logout"><i class="fa fa-sign-out" style="margin-right: 10px;"></i>Logout</a></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </nav> -->
+        <!-- Favicons -->
+  <link href="/public/img/top.png" rel="icon">
+  <link href="/public/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/public/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="/public/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/public/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="/public/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/public/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/public/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="/public/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/public/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Medilab - v2.0.0
+  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
+        <i class="icofont-phone"></i> +91 3535 522 532
+        <i class="icofont-google-map"></i> IIT(ISM), Dhanbad
+      </div>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="#" class="skype"><i class="icofont-skype"></i></a>
+        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="index.html">Medilab</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/#about">About</a></li>
+          <% if(!currentUser){%>
+            <li><a href="#login">Login | SignUp </a></li>
+            <% }else{ %>
+                <li><a href='/inner'><%= currentUser.username %></a></li>
+                <li><a href="/logout">Logout</a></li>
+            <% } %>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+    <% if(error && error.length>0){ %>
+        <div class= "alert alert-danger">
+            <%= error %>
+        </div>
+    <% } %>
+    <% if(success && success.length>0){ %>
+            <div class= "alert alert-success">
+                <%= success %>
+            </div>
+    <% } %>
+    
